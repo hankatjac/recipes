@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Form from "./Form";
 import Recipes from "./Recipes";
 
-
-
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -27,7 +25,6 @@ const Home = () => {
     }
   };
 
-
   const getRecipe = (e) => {
     e.preventDefault();
     const recipeName = e.target.elements.recipeName.value;
@@ -43,7 +40,7 @@ const Home = () => {
         <h1 className="App-title">Recipe Search</h1>
       </header>
       <Form getRecipe={getRecipe} />
-      {recipes && <Recipes recipes={recipes} />}
+      <Recipes recipes={recipes} />
     </div>
   );
 };
